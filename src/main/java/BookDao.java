@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BibliotekaDao {
+public class BookDao {
     private static String READ_ALL = "select * from books";
     private static String CREATE = "insert into books (name,description,price,ISBN,category_id) values (?,?,?,?,?)";
     private static String READ_BY_ID = "select * from books where id =?";
@@ -16,7 +16,7 @@ public class BibliotekaDao {
     private Connection connection;
     private PreparedStatement preparedStatement;
 
-    public BibliotekaDao(Connection connection) {
+    public BookDao(Connection connection) {
         this.connection = connection;
     }
 
